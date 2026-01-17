@@ -89,11 +89,13 @@ struct PWMDisplay
         display->setCursor(5, 15);
         display->print("Freq: ");
         display->print(reading.frequency / 1000.0, 2);
+        display->print(" kHz");
 
         // デューティ表示
         display->setCursor(5, 30);
         display->print("Duty: ");
         display->print(reading.dutyCycle, 1);
+        display->print(" %");
 
         // 区切り線
         display->drawHLine(0, 35, 128);
